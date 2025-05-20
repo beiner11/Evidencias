@@ -5,16 +5,16 @@ use GuzzleHttp\Client;
 
 $client = new Client();
 
-$appToken = "EVrxTRk2MVD8aZ2tPh3epgPy7zDq84uUvTnRlCFC";
-$userToken = "B43VKS814RkrcNHn5PPRgYYN29oIilfBHEtWELlc";
-$sessionToken = "u2je725b8g5gt770iu5s4er5c8";
+$appToken = "";
+$userToken = "";
+$sessionToken = "";
 
 function iniciarSession($client, $appToken,   $userToken)
 {
 
   try {
 
-    $response = $client->get("https://glpi.dwsistemas.net/apirest.php/initSession", [
+    $response = $client->get("https://", [
 
       'headers' => [
         'app-Token' => $appToken,
@@ -38,7 +38,7 @@ function obtenerUser($client, $appToken,  $sessionToken)
 
   try {
 
-    $response = $client->get("https://glpi.dwsistemas.net/apirest.php/User/11", [
+    $response = $client->get("https://", [
       'headers' => [
         'app-Token' => $appToken,
 
